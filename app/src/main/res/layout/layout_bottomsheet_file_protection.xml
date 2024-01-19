@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/bg_main"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_30sdp"
+    android:tag="layout/layout_bottomsheet_file_protection_0">
+
+    <View
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_4sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/bg_border_20dp"
+        android:backgroundTint="#dddddd" />
+
+    <TextView
+        android:id="@+id/tvtRestoreFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:text="@string/restore_file"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/ic_restore_file" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="#f1f1f1" />
+
+    <TextView
+        android:id="@+id/tvtDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:text="@string/delete"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/ic_gray_trash"
+        app:drawableTint="@color/abc_decor_view_status_guard_light" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="#f1f1f1" />
+</LinearLayout>

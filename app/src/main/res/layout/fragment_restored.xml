@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="layout/fragment_restored_0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gv_folder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:scrollbarThumbVertical="@drawable/ic_scrollbar"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constrainedHeight="true" />
+
+        <LinearLayout
+            android:id="@+id/viewEmptyParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:tag="binding_1">
+
+            <include layout="@layout/view_empty_file" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
