@@ -61,7 +61,6 @@ public class CommonUtils {
     }
 
 
-
     public void rateApp(Context context) {
         try {
             context.startActivity(new Intent("android.intent.action.VIEW", Uri.parse("market://details?id=" + context.getPackageName())));
@@ -77,7 +76,6 @@ public class CommonUtils {
             e.printStackTrace();
         }
     }
-
 
 
     public void log(String str) {

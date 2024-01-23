@@ -12,14 +12,7 @@ import com.demo.filerecovery.utilts.Utils;
 public abstract class BaseActivity<DB extends ViewDataBinding> extends AppCompatActivity {
     private final int layout;
     private DB binding;
-//    private final Lazy binding$delegate = LazyKt.lazy(new Function0(this) {
-//
-//
-//        @Override
-//        public Object invoke() {
-//            return DataBindingUtil.setContentView(baseActivity, baseActivity.getLayout());
-//        }
-//    });
+
 
     public BaseActivity(int i) {
         this.layout = i;
@@ -42,12 +35,10 @@ public abstract class BaseActivity<DB extends ViewDataBinding> extends AppCompat
         super.onCreate(bundle);
         Utils.setStatusBarGradiant(this);
         binding = DataBindingUtil.setContentView(this, layout);
-//        onBound(binding);
-//        setupBindingLifecycleOwner();
+
+
         initView();
     }
 
-//    private final void setupBindingLifecycleOwner() {
-//        getBinding().setLifecycleOwner(this);
-//    }
+
 }

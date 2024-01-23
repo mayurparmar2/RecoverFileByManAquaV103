@@ -24,9 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.filerecovery.App;
 import com.demo.filerecovery.Constants;
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.listener.OnItemSelected;
 import com.demo.filerecovery.model.modul.recoveryphoto.Model.PhotoModel;
 import com.demo.filerecovery.model.modul.recoveryphoto.adapter.PhotoAdapter;
@@ -34,7 +32,6 @@ import com.demo.filerecovery.model.modul.recoveryphoto.task.RecoverPhotosAsyncTa
 import com.demo.filerecovery.ui.activity.RestoreResultActivity;
 import com.demo.filerecovery.utilts.SharePreferenceUtils;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.io.File;
@@ -48,7 +45,7 @@ import java.util.List;
 public class PhotosActivity extends AppCompatActivity {
     PhotoAdapter adapter;
     Button btnRestore;
-     
+
     RecoverPhotosAsyncTask mRecoverPhotosAsyncTask;
     RecyclerView recyclerView;
     Toolbar toolbar;
@@ -98,8 +95,8 @@ public class PhotosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_photos);
         intView();
         intData();
-      
-        
+
+
     }
 
     @Override
@@ -408,7 +405,7 @@ public class PhotosActivity extends AppCompatActivity {
             arrayList.add(next.getPathPhoto());
         }
         final Intent intent = new Intent(getApplicationContext(), RestoreResultActivity.class);
-        intent.putExtra("value" , j);
+        intent.putExtra("value", j);
         intent.putExtra(Constants.FB_LOG_RESTORE_RESULT_TYPE, 0);
         intent.putStringArrayListExtra("listPath", arrayList);
         PhotosActivity.this.startActivityForResult(intent, 101);

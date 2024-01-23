@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.demo.filerecovery.base.BaseViewHolder;
-import com.demo.filerecovery.model.LanguageModel;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.DataSource;
@@ -20,7 +18,9 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.demo.filerecovery.R;
+import com.demo.filerecovery.base.BaseViewHolder;
 import com.demo.filerecovery.databinding.ItemLanguageBinding;
+import com.demo.filerecovery.model.LanguageModel;
 
 import java.util.List;
 

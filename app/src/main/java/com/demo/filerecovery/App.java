@@ -6,21 +6,23 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Process;
 
-
 import com.demo.filerecovery.utilts.SharePreferencesManager;
 
 
-public class App extends Application{
+public class App extends Application {
     private static App instance = null;
     private static App myApp = null;
     private Activity currentActivity;
     private StorageCommon storageCommon;
+
     public static App getInstance() {
         return instance;
     }
+
     public StorageCommon getStorageCommon() {
         return this.storageCommon;
     }
+
     @Override
     public void onCreate() {
         SharePreferencesManager.initializeInstance(this);

@@ -13,15 +13,10 @@ import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-
-
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.utilts.FileUtil;
 import com.demo.filerecovery.utilts.SharePreferenceUtils;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 
 import java.io.File;
 import java.security.MessageDigest;
@@ -66,8 +61,8 @@ public class SplashActivity extends AppCompatActivity {
         if ((Build.VERSION.SDK_INT >= 30 && Environment.isExternalStorageManager()) || (Build.VERSION.SDK_INT >= 23 && checkPermission(getPermission()))) {
             checkDateFileProtection();
         }
-        new Handler().postDelayed(new Runnable() { // from class: com.demo.filerecovery.ui.activity.SplashActivity.3.1
-            @Override // java.lang.Runnable
+        new Handler().postDelayed(new Runnable() {
+            @Override
             public final void run() {
                 SplashActivity.this.startMain();
             }

@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentActivity;
 
-import com.demo.filerecovery.utilts.Utils;
 import com.bumptech.glide.Glide;
 import com.demo.filerecovery.R;
+import com.demo.filerecovery.utilts.Utils;
 
 
 public class ImageViewerActivity extends AppCompatActivity {

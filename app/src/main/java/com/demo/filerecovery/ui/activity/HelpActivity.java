@@ -8,16 +8,12 @@ import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
-
-
-
-import com.demo.filerecovery.utilts.Utils;
 import com.demo.filerecovery.R;
+import com.demo.filerecovery.utilts.Utils;
 
 
 public class HelpActivity extends AppCompatActivity {
-     
+
     ImageView ivSpace;
     RelativeLayout rlBanner;
     RelativeLayout rlNative;
@@ -30,9 +26,8 @@ public class HelpActivity extends AppCompatActivity {
         this.rlNative = (RelativeLayout) findViewById(R.id.rl_native);
         this.ivSpace = (ImageView) findViewById(R.id.iv_space);
         this.rlBanner = (RelativeLayout) findViewById(R.id.rl_banner);
-      
 
-        
+
     }
 
     public void onStartClick(View view) {

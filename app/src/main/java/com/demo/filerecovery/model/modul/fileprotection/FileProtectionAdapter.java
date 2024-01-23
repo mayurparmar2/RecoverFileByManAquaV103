@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.demo.filerecovery.base.BaseViewHolder;
-import com.demo.filerecovery.utilts.Utils;
 import com.demo.filerecovery.R;
+import com.demo.filerecovery.base.BaseViewHolder;
 import com.demo.filerecovery.databinding.ItemFileProtectionBinding;
+import com.demo.filerecovery.utilts.Utils;
 
 import org.apache.commons.io.FilenameUtils;
 

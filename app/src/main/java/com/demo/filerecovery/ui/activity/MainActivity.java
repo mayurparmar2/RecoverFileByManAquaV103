@@ -29,15 +29,11 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.airbnb.lottie.LottieAnimationView;
-
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.asynctask.ScanAsyncTask;
 import com.demo.filerecovery.model.modul.fileprotection.FileProtectionActivity;
 import com.demo.filerecovery.utilts.CommonUtils;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 import com.skyfishjy.library.RippleBackground;
 
 import java.io.File;
@@ -63,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     RelativeLayout cvRestoredFile;
     RelativeLayout cvVideo;
     Dialog dialog;
-     
+
     ImageView ivDrawer;
     LottieAnimationView ivSearch;
     ImageView ivSpace;
@@ -100,9 +96,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.rlNative = (RelativeLayout) findViewById(R.id.rl_native);
         this.ivSpace = (ImageView) findViewById(R.id.iv_space);
         this.rlBanner = (RelativeLayout) findViewById(R.id.rl_banner);
-      
-        
-        
+
+
     }
 
     public void intDrawer() {
@@ -331,8 +326,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.dialog.setContentView(R.layout.back_dialog);
         this.dialog.setCancelable(false);
         RelativeLayout relativeLayout = (RelativeLayout) this.dialog.findViewById(R.id.native_exit);
-      
-        
+
+
         ((LinearLayout) this.dialog.findViewById(R.id.rl_yes)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

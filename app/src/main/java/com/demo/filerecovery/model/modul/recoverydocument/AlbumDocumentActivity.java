@@ -8,15 +8,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.ActionBar;
 
 import com.demo.filerecovery.App;
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.asynctask.ScanAsyncTask;
 import com.demo.filerecovery.base.BaseActivity;
+import com.demo.filerecovery.databinding.ActivityAlbumBinding;
 import com.demo.filerecovery.model.modul.recoverydocument.Model.AlbumDocument;
 import com.demo.filerecovery.model.modul.recoverydocument.adapter.AlbumDocumentAdapter;
-import com.demo.filerecovery.R;
-import com.demo.filerecovery.databinding.ActivityAlbumBinding;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,7 +21,7 @@ import java.util.Iterator;
 
 public class AlbumDocumentActivity extends BaseActivity {
     private static final String TAG = "AlbumDocumentActivity";
-     
+
     RelativeLayout rlBanner;
     private AlbumDocumentAdapter albumDocAdapter;
     private ArrayList<AlbumDocument> albumDocuments;
@@ -41,8 +38,8 @@ public class AlbumDocumentActivity extends BaseActivity {
         this.binding = activityAlbumBinding;
         setSupportActionBar(activityAlbumBinding.toolbar);
         this.rlBanner = (RelativeLayout) findViewById(R.id.rl_banner);
-      
-        
+
+
         ActionBar supportActionBar = getSupportActionBar();
         if (supportActionBar != null) {
             supportActionBar.setTitle(R.string.document_recovery);

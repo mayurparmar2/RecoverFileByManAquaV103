@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Environment;
 import android.util.Log;
 
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.model.modul.recoveryaudio.Model.AlbumAudio;
 import com.demo.filerecovery.model.modul.recoveryaudio.Model.AudioModel;
 import com.demo.filerecovery.model.modul.recoverydocument.Model.AlbumDocument;
@@ -16,7 +17,6 @@ import com.demo.filerecovery.model.modul.recoveryphoto.Model.PhotoModel;
 import com.demo.filerecovery.model.modul.recoveryvideo.Model.AlbumVideo;
 import com.demo.filerecovery.model.modul.recoveryvideo.Model.VideoModel;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 
 import org.apache.commons.io.FilenameUtils;
 
@@ -70,14 +70,14 @@ public class ScanAsyncTask extends AsyncTask<Void, Integer, Void> {
 
     @Override
     public void onPostExecute(Void r2) {
-        super.onPostExecute( r2);
+        super.onPostExecute(r2);
         this.callback.onPostExecuteCallback();
         this.callback.onProgressCallback(this.progress);
     }
 
     @Override
     public void onProgressUpdate(Integer... numArr) {
-        super.onProgressUpdate( numArr);
+        super.onProgressUpdate(numArr);
         this.callback.onFileCount(numArr);
         this.callback.onProgressCallback(this.progress);
     }

@@ -71,7 +71,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="center"
-                android:text="Recover your\10file easily"
+                android:text="Recover your\nfile easily"
                 android:textColor="@color/white"
                 android:textSize="22sp" />
 
@@ -86,7 +86,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center"
-                android:text="Recover deleted files, videos,\10audio clips &amp; pictures"
+                android:text="Recover deleted files, videos,\n audio clips &amp; pictures"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 

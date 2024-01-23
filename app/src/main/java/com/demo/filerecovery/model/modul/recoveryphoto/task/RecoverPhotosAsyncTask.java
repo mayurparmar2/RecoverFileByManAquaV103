@@ -7,11 +7,11 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.model.modul.recoveryphoto.Model.PhotoModel;
 import com.demo.filerecovery.ui.activity.LoadingDialog;
 import com.demo.filerecovery.utilts.MediaScanner;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -102,7 +102,7 @@ public class RecoverPhotosAsyncTask extends AsyncTask<String, Integer, String> {
 
     @Override
     public void onPostExecute(String str) {
-        super.onPostExecute( str);
+        super.onPostExecute(str);
         try {
             LoadingDialog loadingDialog = this.progressDialog;
             if (loadingDialog != null && loadingDialog.isShowing()) {
@@ -119,7 +119,7 @@ public class RecoverPhotosAsyncTask extends AsyncTask<String, Integer, String> {
 
     @Override
     public void onProgressUpdate(Integer... numArr) {
-        super.onProgressUpdate( numArr);
+        super.onProgressUpdate(numArr);
         Log.e("TAG", "onProgressUpdate: " + numArr);
     }
 

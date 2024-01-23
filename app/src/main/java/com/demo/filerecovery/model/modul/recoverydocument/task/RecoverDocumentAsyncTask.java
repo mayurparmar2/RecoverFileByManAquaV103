@@ -7,11 +7,11 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.widget.TextView;
 
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.model.modul.recoverydocument.Model.DocumentModel;
 import com.demo.filerecovery.ui.activity.LoadingDialog;
 import com.demo.filerecovery.utilts.MediaScanner;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
@@ -80,86 +80,16 @@ public class RecoverDocumentAsyncTask extends AsyncTask<String, Integer, String>
     public void copyFile(File sourceFile, File destinationFile) {
         try (FileInputStream inputStream = new FileInputStream(sourceFile);
              FileOutputStream outputStream = new FileOutputStream(destinationFile)) {
-             IOUtils.copy(inputStream, outputStream);
+            IOUtils.copy(inputStream, outputStream);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-//    public void copyFile(File file, File file2) {
-//        FileInputStream fileInputStream = null;
-//        try {
-//            try {
-//                FileInputStream fileInputStream2 = new FileInputStream((File) file);
-//                try {
-//                    try {
-//                        FileOutputStream fileOutputStream = new FileOutputStream(file2);
-//                        try {
-//                            IOUtils.copy(fileInputStream2, fileOutputStream);
-//                            IOUtils.closeQuietly((OutputStream) fileOutputStream);
-//                        } catch (IOException unused) {
-//                            IOUtils.closeQuietly((OutputStream) fileOutputStream);
-//                            IOUtils.closeQuietly((InputStream) fileInputStream2);
-//                        } catch (Throwable th) {
-//                            IOUtils.closeQuietly((OutputStream) fileOutputStream);
-//                            IOUtils.closeQuietly((InputStream) fileInputStream2);
-//                            throw th;
-//                        }
-//                    } catch (IOException unused2) {
-//                        file = 0;
-//                        IOUtils.closeQuietly((OutputStream) file);
-//                        IOUtils.closeQuietly((InputStream) fileInputStream2);
-//                        file = file;
-//                        fileInputStream = fileInputStream2;
-//                        IOUtils.closeQuietly((InputStream) fileInputStream);
-//                    } catch (Throwable unused3) {
-//                        file = 0;
-//                        IOUtils.closeQuietly((OutputStream) file);
-//                        IOUtils.closeQuietly((InputStream) fileInputStream2);
-//                        file = file;
-//                        fileInputStream = fileInputStream2;
-//                        IOUtils.closeQuietly((InputStream) fileInputStream);
-//                    }
-//                } catch (IOException unused4) {
-//                    IOUtils.closeQuietly((OutputStream) file);
-//                    IOUtils.closeQuietly((InputStream) fileInputStream2);
-//                    file = file;
-//                    fileInputStream = fileInputStream2;
-//                    IOUtils.closeQuietly((InputStream) fileInputStream);
-//                } catch (Throwable unused5) {
-//                    IOUtils.closeQuietly((OutputStream) file);
-//                    IOUtils.closeQuietly((InputStream) fileInputStream2);
-//                    file = file;
-//                    fileInputStream = fileInputStream2;
-//                    IOUtils.closeQuietly((InputStream) fileInputStream);
-//                }
-//                fileInputStream = fileInputStream2;
-//            } catch (IOException unused6) {
-//                file = 0;
-//                IOUtils.closeQuietly((OutputStream) file);
-//                IOUtils.closeQuietly((InputStream) null);
-//                IOUtils.closeQuietly((InputStream) fileInputStream);
-//            } catch (Throwable unused7) {
-//                file = 0;
-//                IOUtils.closeQuietly((OutputStream) file);
-//                IOUtils.closeQuietly((InputStream) null);
-//                IOUtils.closeQuietly((InputStream) fileInputStream);
-//            }
-//        } catch (IOException unused8) {
-//            IOUtils.closeQuietly((OutputStream) file);
-//            IOUtils.closeQuietly((InputStream) null);
-//            IOUtils.closeQuietly((InputStream) fileInputStream);
-//        } catch (Throwable unused9) {
-//            IOUtils.closeQuietly((OutputStream) file);
-//            IOUtils.closeQuietly((InputStream) null);
-//            IOUtils.closeQuietly((InputStream) fileInputStream);
-//        }
-//        IOUtils.closeQuietly((InputStream) fileInputStream);
-//    }
 
     @Override
     public void onPostExecute(String str) {
-        super.onPostExecute( str);
+        super.onPostExecute(str);
         try {
             LoadingDialog loadingDialog = this.progressDialog;
             if (loadingDialog != null && loadingDialog.isShowing()) {
@@ -176,7 +106,7 @@ public class RecoverDocumentAsyncTask extends AsyncTask<String, Integer, String>
 
     @Override
     public void onProgressUpdate(Integer... numArr) {
-        super.onProgressUpdate( numArr);
+        super.onProgressUpdate(numArr);
     }
 
     public interface OnRestoreListener {

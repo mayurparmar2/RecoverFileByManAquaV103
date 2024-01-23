@@ -13,8 +13,8 @@ import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.demo.filerecovery.utilts.CommonUtils;
 import com.demo.filerecovery.R;
+import com.demo.filerecovery.utilts.CommonUtils;
 
 
 public class VideoViewerActivity extends AppCompatActivity {

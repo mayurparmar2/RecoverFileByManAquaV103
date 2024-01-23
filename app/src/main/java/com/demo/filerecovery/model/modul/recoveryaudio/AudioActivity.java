@@ -24,9 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.filerecovery.App;
 import com.demo.filerecovery.Constants;
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.listener.OnItemSelected;
 import com.demo.filerecovery.model.modul.recoveryaudio.Model.AudioModel;
 import com.demo.filerecovery.model.modul.recoveryaudio.adapter.AudioAdapter;
@@ -34,7 +32,6 @@ import com.demo.filerecovery.model.modul.recoveryaudio.task.RecoverAudioAsyncTas
 import com.demo.filerecovery.ui.activity.RestoreResultActivity;
 import com.demo.filerecovery.utilts.SharePreferenceUtils;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
@@ -47,7 +44,7 @@ import java.util.List;
 public class AudioActivity extends AppCompatActivity {
     AudioAdapter adapter;
     Button btnRestore;
-     
+
     RecoverAudioAsyncTask mRecoverPhotosAsyncTask;
     RecyclerView recyclerView;
     Toolbar toolbar;
@@ -97,8 +94,8 @@ public class AudioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_photos);
         intView();
         intData();
-      
-        
+
+
     }
 
     public void intView() {
@@ -195,7 +192,7 @@ public class AudioActivity extends AppCompatActivity {
             arrayList.add(next.getPathPhoto());
         }
         final Intent intent = new Intent(getApplicationContext(), RestoreResultActivity.class);
-        intent.putExtra("value" , j);
+        intent.putExtra("value", j);
         intent.putExtra(Constants.FB_LOG_RESTORE_RESULT_TYPE, 2);
         intent.putStringArrayListExtra("listPath", arrayList);
         AudioActivity.this.startActivityForResult(intent, 101);

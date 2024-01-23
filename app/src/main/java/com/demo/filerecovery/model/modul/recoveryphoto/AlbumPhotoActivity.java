@@ -16,21 +16,18 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.filerecovery.App;
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.asynctask.ScanAsyncTask;
 import com.demo.filerecovery.model.modul.recoveryphoto.Model.AlbumPhoto;
 import com.demo.filerecovery.model.modul.recoveryphoto.adapter.AlbumsPhotoAdapter;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 
 import java.util.ArrayList;
 
 
 public class AlbumPhotoActivity extends AppCompatActivity implements AlbumsPhotoAdapter.OnClickItemListener {
     AlbumsPhotoAdapter adapter;
-     
+
     RecyclerView recyclerView;
     RelativeLayout rlBanner;
     Toolbar toolbar;
@@ -58,8 +55,8 @@ public class AlbumPhotoActivity extends AppCompatActivity implements AlbumsPhoto
         intView();
         intData();
         this.rlBanner = (RelativeLayout) findViewById(R.id.rl_banner);
-      
-        
+
+
     }
 
     public void intView() {
@@ -80,8 +77,8 @@ public class AlbumPhotoActivity extends AppCompatActivity implements AlbumsPhoto
         this.recyclerView.setItemAnimator(new DefaultItemAnimator());
         TextView textView = this.txtFileType;
         textView.setText(getString(R.string.photos) + " " + getString(R.string.were_found));
-      
-        
+
+
     }
 
     public void intData() {

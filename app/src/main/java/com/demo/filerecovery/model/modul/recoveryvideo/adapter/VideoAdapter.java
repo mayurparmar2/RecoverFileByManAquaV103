@@ -13,16 +13,16 @@ import android.widget.Toast;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.demo.filerecovery.listener.OnItemSelected;
-import com.demo.filerecovery.model.SquareImageView;
-import com.demo.filerecovery.model.modul.recoveryvideo.Model.VideoModel;
-import com.demo.filerecovery.ui.activity.VideoViewerActivity;
-import com.demo.filerecovery.utilts.Utils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.demo.filerecovery.R;
+import com.demo.filerecovery.listener.OnItemSelected;
+import com.demo.filerecovery.model.SquareImageView;
+import com.demo.filerecovery.model.modul.recoveryvideo.Model.VideoModel;
+import com.demo.filerecovery.ui.activity.VideoViewerActivity;
+import com.demo.filerecovery.utilts.Utils;
 
 import java.text.DateFormat;
 import java.util.ArrayList;

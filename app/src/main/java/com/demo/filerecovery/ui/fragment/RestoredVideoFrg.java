@@ -15,16 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.filerecovery.App;
 import com.demo.filerecovery.Constants;
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.model.modul.recoveryvideo.Model.VideoModel;
 import com.demo.filerecovery.ui.adapter.RestoreFileAdapter;
-import com.demo.filerecovery.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
-
-
 
 
 public class RestoredVideoFrg extends Fragment {

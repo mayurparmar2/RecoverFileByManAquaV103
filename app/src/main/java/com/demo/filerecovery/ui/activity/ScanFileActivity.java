@@ -10,15 +10,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.content.res.AppCompatResources;
 
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.asynctask.ScanAsyncTask;
 import com.demo.filerecovery.base.BaseActivity;
+import com.demo.filerecovery.databinding.ActivityScanFileBinding;
 import com.demo.filerecovery.model.modul.recoveryaudio.AlbumAudioActivity;
 import com.demo.filerecovery.model.modul.recoverydocument.AlbumDocumentActivity;
 import com.demo.filerecovery.model.modul.recoveryphoto.AlbumPhotoActivity;
 import com.demo.filerecovery.model.modul.recoveryvideo.AlbumVideoActivity;
-import com.demo.filerecovery.R;
-import com.demo.filerecovery.databinding.ActivityScanFileBinding;
 
 import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -29,7 +28,7 @@ public final class ScanFileActivity extends BaseActivity<ActivityScanFileBinding
     public static final Companion Companion = new Companion(null);
     public static int type;
     private final String TAG;
-     
+
     ImageView ivSpace;
     RelativeLayout rlBanner;
     RelativeLayout rlNative;
@@ -82,9 +81,8 @@ public final class ScanFileActivity extends BaseActivity<ActivityScanFileBinding
 
     @Override
     public void initView() {
-      
-        
-        
+
+
         getBinding().toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public final void onClick(View view) {
@@ -115,7 +113,6 @@ public final class ScanFileActivity extends BaseActivity<ActivityScanFileBinding
         });
         scanType();
     }
-
 
 
     private final void scanType() {

@@ -17,21 +17,18 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.filerecovery.App;
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.asynctask.ScanAsyncTask;
 import com.demo.filerecovery.model.modul.recoveryvideo.Model.AlbumVideo;
 import com.demo.filerecovery.model.modul.recoveryvideo.adapter.AlbumsVideoAdapter;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class AlbumVideoActivity extends AppCompatActivity implements AlbumsVideoAdapter.OnClickItemListener {
-     
+
     RelativeLayout rlBanner;
     private AlbumsVideoAdapter adapter;
     private ImageView imgScannedType;
@@ -62,8 +59,8 @@ public class AlbumVideoActivity extends AppCompatActivity implements AlbumsVideo
         intView();
         intData();
         this.rlBanner = (RelativeLayout) findViewById(R.id.rl_banner);
-      
-        
+
+
         TextView textView = this.txtFileType;
         textView.setText(getString(R.string.videos) + " " + getString(R.string.were_found));
     }

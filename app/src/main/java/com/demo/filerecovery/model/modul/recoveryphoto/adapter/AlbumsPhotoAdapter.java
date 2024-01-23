@@ -9,16 +9,14 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
-
-import com.demo.filerecovery.model.modul.recoveryphoto.Model.AlbumPhoto;
 import com.demo.filerecovery.R;
+import com.demo.filerecovery.model.modul.recoveryphoto.Model.AlbumPhoto;
 
 import java.util.ArrayList;
 
 
 public class AlbumsPhotoAdapter extends RecyclerView.Adapter<AlbumsPhotoAdapter.MyViewHolder> {
-     
+
     private ArrayList<AlbumPhoto> al_menu = new ArrayList<>();
     private Context context;
     private OnClickItemListener mOnClickItemListener;
@@ -27,7 +25,7 @@ public class AlbumsPhotoAdapter extends RecyclerView.Adapter<AlbumsPhotoAdapter.
     public AlbumsPhotoAdapter(Context context, OnClickItemListener onClickItemListener) {
         this.context = context;
         this.mOnClickItemListener = onClickItemListener;
-      
+
     }
 
     public void setData(ArrayList<AlbumPhoto> arrayList) {

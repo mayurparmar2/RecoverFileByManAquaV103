@@ -15,18 +15,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.filerecovery.App;
 import com.demo.filerecovery.Constants;
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.base.BaseActivity;
+import com.demo.filerecovery.databinding.ActivityFileFolderBinding;
+import com.demo.filerecovery.databinding.LayoutBottomSheetSortFileBinding;
 import com.demo.filerecovery.model.modul.recoverydocument.Model.DocumentModel;
 import com.demo.filerecovery.model.modul.recoverydocument.adapter.DocumentAdapter;
 import com.demo.filerecovery.model.modul.recoverydocument.task.RecoverDocumentAsyncTask;
 import com.demo.filerecovery.ui.activity.RestoreResultActivity;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
-import com.demo.filerecovery.databinding.ActivityFileFolderBinding;
-import com.demo.filerecovery.databinding.LayoutBottomSheetSortFileBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
@@ -44,7 +41,7 @@ public final class DocumentActivity extends BaseActivity<ActivityFileFolderBindi
     public static final int SORT_ASC = 1;
     public static final int SORT_DESC = 2;
     private final ArrayList<DocumentModel> listDocument;
-     
+
     private BottomSheetDialog bottomSheetDialogSortBy;
     private DocumentAdapter docAdapter;
     private RecoverDocumentAsyncTask mDocAsyncTask;
@@ -169,8 +166,8 @@ public final class DocumentActivity extends BaseActivity<ActivityFileFolderBindi
     public void initView() {
         setSupportActionBar(getBinding().toolbar);
         ActionBar supportActionBar = getSupportActionBar();
-      
-        
+
+
         Intrinsics.checkNotNull(supportActionBar);
         supportActionBar.setDisplayHomeAsUpEnabled(true);
         ActionBar supportActionBar2 = getSupportActionBar();
@@ -365,7 +362,7 @@ public final class DocumentActivity extends BaseActivity<ActivityFileFolderBindi
             j += next.getSizeDocument();
             arrayList.add(next.getPathDocument());
         }
-        intent.putExtra("value" , j);
+        intent.putExtra("value", j);
         intent.putExtra(Constants.FB_LOG_RESTORE_RESULT_TYPE, 3);
         intent.putStringArrayListExtra("listPath", arrayList);
         startActivityForResult(intent, 101);

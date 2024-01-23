@@ -8,13 +8,13 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.demo.filerecovery.model.modul.recoveryphoto.Model.PhotoModel;
-import com.demo.filerecovery.utilts.Utils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.demo.filerecovery.R;
 import com.demo.filerecovery.databinding.ItemFileFolderBinding;
+import com.demo.filerecovery.model.modul.recoveryphoto.Model.PhotoModel;
+import com.demo.filerecovery.utilts.Utils;
 
 import org.apache.commons.io.FilenameUtils;
 
@@ -89,10 +89,6 @@ public final class PhotoSuccessAdapter extends RecyclerView.Adapter<RecyclerView
         ((PhotoSuccessViewHolder) holder).onBind((PhotoModel) obj);
     }
 
-//    @Override
-//    public int getItemViewType(int i) {
-//        return ((this.listFileAndAds.get(i) instanceof NativeAd) || !(this.listFileAndAds.get(i) instanceof PhotoModel)) ? 1 : 0;
-//    }
 
     @Override
     public int getItemCount() {

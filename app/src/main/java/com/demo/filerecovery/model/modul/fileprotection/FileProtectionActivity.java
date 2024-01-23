@@ -5,15 +5,13 @@ import android.view.View;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.base.BaseActivity;
+import com.demo.filerecovery.databinding.ActivityFileProtectionBinding;
 import com.demo.filerecovery.model.modul.recoverydocument.Model.DocumentModel;
 import com.demo.filerecovery.model.modul.recoverydocument.task.RecoverDocumentAsyncTask;
 import com.demo.filerecovery.ui.dialog.DeleteFileDialog;
 import com.demo.filerecovery.utilts.FileUtil;
-import com.demo.filerecovery.R;
-import com.demo.filerecovery.databinding.ActivityFileProtectionBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import org.apache.commons.io.FilenameUtils;
@@ -103,7 +101,7 @@ public final class FileProtectionActivity extends BaseActivity<ActivityFileProte
                 FileProtectionActivity.this.finish();
             }
         });
-        
+
         loadListFileProtection();
         FileProtectionAdapter fileProtectionAdapter = new FileProtectionAdapter(this, this);
         this.fileProtectionAdapter = fileProtectionAdapter;

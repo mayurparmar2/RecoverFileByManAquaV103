@@ -16,14 +16,14 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.demo.filerecovery.model.SquareImageView;
-import com.demo.filerecovery.model.modul.recoveryvideo.Model.VideoModel;
-import com.demo.filerecovery.utilts.Utils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.demo.filerecovery.R;
+import com.demo.filerecovery.model.SquareImageView;
+import com.demo.filerecovery.model.modul.recoveryvideo.Model.VideoModel;
+import com.demo.filerecovery.utilts.Utils;
 
 import java.io.File;
 import java.text.DateFormat;

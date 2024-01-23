@@ -30,14 +30,24 @@ public class Utils {
     public static final String SUBSCRIPTION_PER_WEEK = "recovery.weekly.iap";
     private static String r2;
 
-    public static String formatSize(long j) {
-        double d = 0;
-        if (j <= 0) {
-            return "";
+    /* get format File Size*/
+    public static String formatSize(long size) {
+        if (size <= 0) {
+            return "0 B";
         }
-        int log10 = (int) (Math.log10(j) / Math.log10(1024.0d));
-        return new DecimalFormat("#,##0.#").format(d / Math.pow(1024.0d, log10)) + " " + new String[]{"B", "KB", "MB", "GB", "TB"}[log10];
+        final String[] units = {"B", "KB", "MB", "GB", "TB"};
+        int digitGroups = (int) (Math.log10(size) / Math.log10(1024));
+        return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
     }
+
+//    public static String formatSize(long j) {
+//        double d = 0;
+//        if (j <= 0) {
+//            return "";
+//        }
+//        int log10 = (int) (Math.log10(j) / Math.log10(1024.0d));
+//        return new DecimalFormat("#,##0.#").format(d / Math.pow(1024.0d, log10)) + " " + new String[]{"B", "KB", "MB", "GB", "TB"}[log10];
+//    }
 
     public static String getFileName(String str) {
         return str.substring(str.lastIndexOf("/") + 1);

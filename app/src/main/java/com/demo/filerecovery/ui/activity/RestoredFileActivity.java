@@ -21,9 +21,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.demo.filerecovery.App;
 import com.demo.filerecovery.Constants;
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.model.modul.recoveryaudio.Model.AudioModel;
 import com.demo.filerecovery.model.modul.recoverydocument.Model.DocumentModel;
 import com.demo.filerecovery.model.modul.recoveryphoto.Model.PhotoModel;
@@ -37,7 +35,6 @@ import com.demo.filerecovery.ui.fragment.RestoredPhotoFrg;
 import com.demo.filerecovery.ui.fragment.RestoredVideoFrg;
 import com.demo.filerecovery.utilts.FileUtil;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.tabs.TabLayout;
 
@@ -46,8 +43,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-
-
 
 
 public class RestoredFileActivity extends AppCompatActivity implements DeleteFileDialog.DeleteFileDialogCallBack {
@@ -67,7 +62,7 @@ public class RestoredFileActivity extends AppCompatActivity implements DeleteFil
     public TabLayout tabLayout;
     public TextView tvTotalFileSelected;
     public ViewPager vpMedia;
-     
+
     private DeleteFileDialog deleteFileDialog;
     private ImageView imgAtoZSelected;
     private ImageView imgLatestSelected;
@@ -112,8 +107,8 @@ public class RestoredFileActivity extends AppCompatActivity implements DeleteFil
         arrayList.addAll(Arrays.asList(this.restoredPhotoFrg, this.restoredVideoFrg, this.restoredAudioFrg, this.restoredDocumentsFrg));
         Utils.setStatusBarGradiant(this);
         setContentView(R.layout.activity_restored_file);
-      
-        
+
+
         this.listFileDelete = new ArrayList<>();
         this.type = getIntent().getIntExtra(Constants.FB_LOG_RESTORE_RESULT_TYPE, 0);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -493,7 +488,7 @@ public class RestoredFileActivity extends AppCompatActivity implements DeleteFil
 
         @Override
         public void onPostExecute(Void r5) {
-            super.onPostExecute( r5);
+            super.onPostExecute(r5);
             if (RestoredFileActivity.this.isDestroyed()) {
                 return;
             }
@@ -536,7 +531,7 @@ public class RestoredFileActivity extends AppCompatActivity implements DeleteFil
 
         @Override
         public void onProgressUpdate(Integer... numArr) {
-            super.onProgressUpdate( numArr);
+            super.onProgressUpdate(numArr);
         }
 
         @Override

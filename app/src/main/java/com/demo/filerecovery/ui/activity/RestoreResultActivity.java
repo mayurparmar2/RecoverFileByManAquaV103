@@ -20,14 +20,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.filerecovery.Constants;
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.ui.adapter.ItemRestoredAdapter;
 import com.demo.filerecovery.utilts.FileUtil;
 import com.demo.filerecovery.utilts.SharePreferenceUtils;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 
 import org.apache.commons.io.FilenameUtils;
 
@@ -41,7 +38,7 @@ public class RestoreResultActivity extends AppCompatActivity {
     private final String APP_INSTALL_TYPE = "application/vnd.android.package-archive";
     private final String PROVIDER_PATH = ".provider";
     public MutableLiveData<Boolean> isLoadAdError = new MutableLiveData<>();
-     
+
     String mName = "";
     int type = -1;
 
@@ -73,8 +70,8 @@ public class RestoreResultActivity extends AppCompatActivity {
             return;
         }
         this.listPathSelect.addAll(this.listPath);
-      
-        
+
+
     }
 
     private void initRvData() {
@@ -85,7 +82,7 @@ public class RestoreResultActivity extends AppCompatActivity {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int i) {
                 super.onScrollStateChanged(recyclerView, i);
-//                RestoreResultActivity.this.loadMoreAdNative(linearLayoutManager.findLastVisibleItemPosition());
+
             }
         });
         this.adapter.setTypeMedia(this.type);
@@ -95,12 +92,8 @@ public class RestoreResultActivity extends AppCompatActivity {
 
 
         this.rvListFileRestored.setAdapter(this.adapter);
-//        this.listAdsNativeLiveData.observe(this, new Observer() {
-//            @Override
-//            public final void onChanged(Object obj) {
-//                RestoreResultActivity.this.lambda$initRvData$0$RestoreResultActivity((ArrayList) obj);
-//            }
-//        });
+
+
         this.isLoadAdError.observe(this, new Observer() {
             @Override
             public final void onChanged(Object obj) {
@@ -115,7 +108,6 @@ public class RestoreResultActivity extends AppCompatActivity {
             removeAdsLoadingFails(this.adapter.getListFileAndAds());
         }
     }
-
 
 
     private void removeAdsLoadingFails(ArrayList<Object> arrayList) {
@@ -250,7 +242,7 @@ public class RestoreResultActivity extends AppCompatActivity {
 
     public void intData() {
         this.type = getIntent().getIntExtra(Constants.FB_LOG_RESTORE_RESULT_TYPE, 0);
-        long longExtra = getIntent().getLongExtra("value" , 0L);
+        long longExtra = getIntent().getLongExtra("value", 0L);
         ArrayList<String> stringArrayListExtra = getIntent().getStringArrayListExtra("listPath");
         this.listPath = stringArrayListExtra;
         this.listPathSelect.addAll(stringArrayListExtra);

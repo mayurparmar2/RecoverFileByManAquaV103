@@ -61,16 +61,20 @@
     <style name="CustomBottomSheetDialogTheme" parent="">
         <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
     </style>
+
     <style name="AppTheme.WindowTransition" parent="@style/AppTheme">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
+
     <style name="CustomBottomSheetStyle" parent="">
         <item name="android:background">@android:color/transparent</item>
     </style>
+
     <style name="CustomBottomSheet" parent="">
         <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
     </style>
+
     <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
         <item name="cornerFamily">@null</item>
         <item name="cornerSizeBottomLeft">0dp</item>
@@ -78,6 +82,7 @@
         <item name="cornerSizeTopLeft">16dp</item>
         <item name="cornerSizeTopRight">16dp</item>
     </style>
+
     <style name="Theme.DataRecoveryPhotoRecovery" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:statusBarColor">@color/bg_main</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -87,11 +92,13 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
     </style>
+
     <style name="Theme_AppCompat_Light_NoActionBar_FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="FileProtection" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:statusBarColor">@color/light_rad</item>
         <item name="colorAccent">@color/light_rad</item>

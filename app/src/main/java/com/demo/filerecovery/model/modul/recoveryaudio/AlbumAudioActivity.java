@@ -16,21 +16,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.filerecovery.App;
-
-
-
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.asynctask.ScanAsyncTask;
 import com.demo.filerecovery.model.modul.recoveryaudio.Model.AlbumAudio;
 import com.demo.filerecovery.model.modul.recoveryaudio.adapter.AlbumsAudioAdapter;
 import com.demo.filerecovery.utilts.Utils;
-import com.demo.filerecovery.R;
 
 import java.util.ArrayList;
 
 
 public class AlbumAudioActivity extends AppCompatActivity implements AlbumsAudioAdapter.OnClickItemListener {
     AlbumsAudioAdapter adapter;
-     
+
     RecyclerView recyclerView;
     RelativeLayout rlBanner;
     Toolbar toolbar;
@@ -81,7 +78,7 @@ public class AlbumAudioActivity extends AppCompatActivity implements AlbumsAudio
         textView.setText(getString(R.string.audios) + " " + getString(R.string.were_found));
         this.rlBanner = (RelativeLayout) findViewById(R.id.rl_banner);
 
-        
+
     }
 
     public void intData() {

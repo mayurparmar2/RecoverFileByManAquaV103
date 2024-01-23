@@ -21,18 +21,18 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.FragmentActivity;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.Priority;
+import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.demo.filerecovery.Constants;
+import com.demo.filerecovery.R;
 import com.demo.filerecovery.model.modul.recoveryvideo.Model.VideoModel;
 import com.demo.filerecovery.model.modul.recoveryvideo.task.RecoverOneVideosAsyncTask;
 import com.demo.filerecovery.ui.activity.RestoreResultActivity;
 import com.demo.filerecovery.utilts.FileUtil;
 import com.demo.filerecovery.utilts.SharePreferenceUtils;
 import com.demo.filerecovery.utilts.Utils;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.Priority;
-import com.bumptech.glide.RequestManager;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.demo.filerecovery.R;
 
 import java.io.File;
 import java.security.AccessController;
@@ -156,7 +156,7 @@ public class FileInfoActivity extends AppCompatActivity implements View.OnClickL
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add(this.mVideoModel.getPathPhoto());
         Intent intent = new Intent(getApplicationContext(), RestoreResultActivity.class);
-        intent.putExtra("value" , this.mVideoModel.getSizePhoto());
+        intent.putExtra("value", this.mVideoModel.getSizePhoto());
         intent.putExtra(Constants.FB_LOG_RESTORE_RESULT_TYPE, 1);
         intent.putStringArrayListExtra("listPath", arrayList);
         startActivityForResult(intent, 101);
@@ -252,7 +252,7 @@ public class FileInfoActivity extends AppCompatActivity implements View.OnClickL
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add(this.mVideoModel.getPathPhoto());
         Intent intent = new Intent(getApplicationContext(), RestoreResultActivity.class);
-        intent.putExtra("value" , 1);
+        intent.putExtra("value", 1);
         intent.putExtra(Constants.FB_LOG_RESTORE_RESULT_TYPE, 1);
         intent.putStringArrayListExtra("listPath", arrayList);
         startActivityForResult(intent, 101);
