@@ -68,6 +68,8 @@ public class SharePreferencesManager {
         return this.mPref.getBoolean(str, bool.booleanValue());
     }
 
+
+
     public void remove(String str) {
         this.mPref.edit().remove(str).apply();
     }

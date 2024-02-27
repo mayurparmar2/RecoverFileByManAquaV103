@@ -35,7 +35,7 @@
 
         <TextView
             android:id="@+id/tvCancel"
-            android:layout_width="@dimen/_120sdp"
+            android:layout_width="@dimen/_80sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginLeft="@dimen/_20sdp"
             android:background="@drawable/background_button_border_blue"
@@ -48,7 +48,7 @@
 
         <TextView
             android:id="@+id/tvDelete"
-            android:layout_width="@dimen/_120sdp"
+            android:layout_width="@dimen/_80sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/_20sdp"
